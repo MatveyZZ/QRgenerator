@@ -1,139 +1,217 @@
-*{
+* {
     box-sizing: border-box;
+    /* Устанавливает модель коробки для всех элементов, включая padding и border в ширину и высоту элемента */
 }
 
-body{
-    background: #1c1e26;
-    font-family: sans-serif;
-    max-width: 500px;
-    height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+body {
+    background: #1c1e26; 
+    /* Устанавливает фоновый цвет для тела документа */
+    font-family: sans-serif; 
+    /* Устанавливает шрифт без засечек для всего текста на странице */
+    max-width: 500px; 
+    /* Ограничивает максимальную ширину тела документа до 500 пикселей */
+    height: 100vh; 
+    /* Устанавливает высоту тела документа на 100% высоты видимой области окна */
+    margin: 0 auto; 
+    /* Убирает отступы по умолчанию и центрирует тело документа по горизонтали */
+    display: flex; 
+    /* Устанавливает флекс-контейнер для выравнивания дочерних элементов */
+    align-items: center; 
+    /* Выравнивает дочерние элементы по вертикали по центру */
+    justify-content: center; 
+    /* Выравнивает дочерние элементы по горизонтали по центру */
+    color: #fff; 
+    /* Устанавливает цвет текста на белый */
 }
 
-input[type="color"]{
-    border: none;
-    width: 32.5%;
-    height: 40px;
-    border-radius: 3px;
+input[type="color"] {
+    border: none; 
+    /* Убирает границу у полей выбора цвета */
+    width: 32.5%; 
+    /* Устанавливает ширину полей выбора цвета на 32.5% от родительского контейнера */
+    height: 40px; 
+    /* Устанавливает высоту полей выбора цвета на 40 пикселей */
+    border-radius: 3px; 
+    /* Устанавливает радиус скругления углов полей выбора цвета */
 }
 
-input[type="color"]::-webkit-color-swatch-wrapper{
-    padding: 0;
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0; 
+    /* Убирает отступы вокруг области выбора цвета в браузерах на основе WebKit */
 }
 
-input[type="color"]::-webkit-color-swatch{
-    border: none;
+input[type="color"]::-webkit-color-swatch {
+    border: none; 
+    /* Убирает границу вокруг области выбора цвета в браузерах на основе WebKit */
 }
 
-a{
-    text-decoration: none;
+a {
+    text-decoration: none; 
+    /* Убирает подчеркивание у ссылок */
 }
 
-.qr-text{
-    padding: 1rem;
-    display: block;
-    background: #181b29;
-    border: 1px solid #414866;
-    border-radius: 4px;
-    width: 100%;
-    margin: 0.5rem 0 1rem 0;
-    color: #fff;
-    outline: none;
+.qr-text {
+    padding: 1rem; 
+    /* Устанавливает внутренний отступ (padding) в 1rem для поля ввода текста QR-кода */
+    display: block; 
+    /* Устанавливает элемент как блочный, чтобы занимать всю ширину родительского контейнера */
+    background: #181b29; 
+    /* Устанавливает фоновый цвет для поля ввода текста */
+    border: 1px solid #414866; 
+    /* Устанавливает границу шириной 1px и цветом #414866 */
+    border-radius: 4px; 
+    /* Устанавливает радиус скругления углов границы в 4px */
+    width: 100%; 
+    /* Устанавливает ширину поля ввода на 100% от родительского контейнера */
+    margin: 0.5rem 0 1rem 0; 
+    /* Устанавливает отступы: 0.5rem сверху, 0 снизу, 1rem снизу */
+    color: #fff; 
+    /* Устанавливает цвет текста на белый */
+    outline: none; 
+    /* Убирает обводку вокруг поля ввода при фокусировке */
 }
 
-.qr-text::placeholder{
-    color: #8b92b7;
-    font-weight: 500;
+.qr-text::placeholder {
+    color: #8b92b7; 
+    /* Устанавливает цвет текста подсказки (placeholder) в поле ввода */
+    font-weight: 500; 
+    /* Устанавливает жирность текста подсказки на 500 (полужирный) */
 }
 
-#qr-code{
-    height: 500px;
-    width: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #414866;
+#qr-code {
+    height: 500px; 
+    /* Устанавливает высоту контейнера для QR-кода на 500 пикселей */
+    width: 500px; 
+    /* Устанавливает ширину контейнера для QR-кода на 500 пикселей */
+    display: flex; 
+    /* Устанавливает контейнер как флекс-контейнер для выравнивания дочерних элементов */
+    align-items: center; 
+    /* Выравнивает дочерние элементы по вертикали по центру */
+    justify-content: center; 
+    /* Выравнивает дочерние элементы по горизонтали по центру */
+    border: 1px solid #414866; 
+    /* Устанавливает границу шириной 1px и цветом #414866 для контейнера QR-кода */
 }
 
-#qr-code img, #qr-code canvas{
-    max-width: 100% !important;
-    max-height: 100% !important;
+#qr-code img, #qr-code canvas {
+    max-width: 100% !important; 
+    /* Устанавливает максимальную ширину изображений и canvas на 100% от родительского контейнера, игнорируя другие правила */
+    max-height: 100% !important; 
+    /* Устанавливает максимальную высоту изображений и canvas на 100% от родительского контейнера, игнорируя другие правила */
 }
 
-.row{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.row {
+    display: flex; 
+    /* Устанавливает контейнер как флекс-контейнер для выравнивания дочерних элементов */
+    align-items: center; 
+    /* Выравнивает дочерние элементы по вертикали по центру */
+    justify-content: space-between; 
+    /* Распределяет дочерние элементы по горизонтали с равными промежутками между ними */
 }
 
-.sizes{
-    width: 32.5%;
-    height: 40px;
-    color: #fff;
-    background: #181b29;
-    border: 1px solid #414866;
-    border-radius: 4px;
-    outline: none;
+.sizes {
+    width: 32.5%; 
+    /* Устанавливает ширину элемента (выпадающего списка) на 32.5% от родительского контейнера */
+    height: 40px; 
+    /* Устанавливает высоту элемента на 40 пикселей */
+    color: #fff; 
+    /* Устанавливает цвет текста на белый */
+    background: #181b29; 
+    /* Устанавливает фоновый цвет для элемента */
+    border: 1px solid #414866; 
+    /* Устанавливает границу шириной 1px и цветом #414866 */
+    border-radius: 4px; 
+    /* Устанавливает радиус скругления углов границы в 4px */
+    outline: none; 
+    /* Убирает обводку вокруг элемента при фокусировке */
 }
 
-.btn{
-    color: #fff;
-    max-width: 200px;
-    padding: 14px;
-    background: rgb(106, 43, 255);
-    border-radius: 4px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: 500;
-    flex: 1;
+.btn {
+    color: #fff; 
+    /* Устанавливает цвет текста на белый для кнопок */
+    max-width: 200px; 
+    /* Устанавливает максимальную ширину кнопки на 200 пикселей */
+    padding: 14px; 
+    /* Устанавливает внутренний отступ (padding) в 14px для кнопки */
+    background: rgb(106, 43, 255); 
+    /* Устанавливает фоновый цвет кнопки */
+    border-radius: 4px; 
+    /* Устанавливает радиус скругления углов границы кнопки в 4px */
+    border: none; 
+    /* Убирает границу у кнопки */
+    display: flex; 
+    /* Устанавливает кнопку как флекс-контейнер для выравнивания содержимого */
+    align-items: center; 
+    /* Выравнивает содержимое кнопки по вертикали по центру */
+    justify-content: center; 
+    /* Выравнивает содержимое кнопки по горизонтали по центру */
+    cursor: pointer; 
+    /* Устанавливает курсор в виде указателя при наведении на кнопку */
+    font-size: 1.1rem; 
+    /* Устанавливает размер шрифта для текста кнопки на 1.1rem */
+    font-weight: 500; 
+    /* Устанавливает жирность текста кнопки на 500 (полужирный) */
+    flex: 1; 
+    /* Позволяет кнопке занимать доступное пространство в флекс-контейнере */
 }
 
-.btn img{
-    width: 20px;
-    margin-left: 10px;
+.btn img {
+    width: 20px; 
+    /* Устанавливает ширину изображений внутри кнопок на 20 пикселей */
+    margin-left: 10px; 
+    /* Устанавливает левый отступ (margin) для изображений внутри кнопок на 10 пикселей */
 }
 
-.share-btn{
-    margin-left: 0.7rem;
+.share-btn {
+    margin-left: 0.7rem; 
+    /* Устанавливает левый отступ (margin) для кнопки "Share" на 0.7rem */
 }
 
-.action-container{
-    display: flex;
-    margin: 1rem 0;
+.action-container {
+    display: flex; 
+    /* Устанавливает контейнер действий как флекс-контейнер для выравнивания дочерних элементов */
+    margin: 1rem 0; 
+    /* Устанавливает вертикальные отступы (margin) на 1rem сверху и снизу */
 }
 
-@media (max-width: 512px){
-    body{
-        max-width: 100%;
-        padding: 10px;
+@media (max-width: 512px) {
+    /* Медиа-запрос для экранов шириной 512px и меньше */
+    body {
+        max-width: 100%; 
+        /* Устанавливает максимальную ширину тела документа на 100% от ширины окна */
+        padding: 10px; 
+        /* Устанавливает внутренний отступ (padding) для тела документа на 10 пикселей */
     }
-    #qr-code{
-        width: 95vw;
-        height: 95vw;
+    #qr-code {
+        width: 95vw; 
+        /* Устанавливает ширину контейнера QR-кода на 95% ширины видимой области окна (viewport) */
+        height: 95vw; 
+        /* Устанавливает высоту контейнера QR-кода на 95% ширины видимой области окна (viewport) */
     }
-    #qr-code img, #qr-code canvas{
-        max-width: 95vw !important;
-        max-height: 95vw !important;
+    #qr-code img, #qr-code canvas {
+        max-width: 95vw !important; 
+        /* Устанавливает максимальную ширину изображений и canvas на 95% ширины видимой области окна, игнорируя другие правила */
+        max-height: 95vw !important; 
+        /* Устанавливает максимальную высоту изображений и canvas на 95% ширины видимой области окна, игнорируя другие правила */
     }
-    .btn{
-        min-width: unset;
+    .btn {
+        min-width: unset; 
+        /* Убирает минимальную ширину кнопок, чтобы они могли адаптироваться к доступному пространству */
     }
 }
 
-@media (max-width: 350px){
-    .action-container{
-        flex-direction: column;
+@media (max-width: 350px) {
+    /* Медиа-запрос для экранов шириной 350px и меньше */
+    
+    .action-container {
+        flex-direction: column; 
+        /* Устанавливает направление флекс-контейнера на вертикальное (колонка), чтобы дочерние элементы располагались один под другим */
     }
-    .share-btn{
-        margin-left: 0;
-        margin-top: 0.7rem;
+    
+    .share-btn {
+        margin-left: 0; 
+        /* Убирает левый отступ (margin) для кнопки "Share" */
+        margin-top: 0.7rem; 
+        /* Устанавливает верхний отступ (margin) для кнопки "Share" на 0.7rem, чтобы создать пространство между кнопками */
     }
 }

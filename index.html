@@ -1,49 +1,84 @@
 <!DOCTYPE html>
+<!-- Указывает, что документ является HTML5 -->
+
 <html lang="en">
+<!-- Начало HTML-документа с указанием языка (английский) -->
 
 <head>
+    <!-- Начало секции заголовка документа -->
     <meta charset="UTF-8">
+    <!-- Устанавливает кодировку документа на UTF-8 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Указывает браузеру использовать режим совместимости с последними версиями Internet Explorer -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Устанавливает параметры отображения для мобильных устройств -->
     <link rel="stylesheet" href="style.css">
+    <!-- Подключает внешний файл стилей (CSS) -->
     <title>Qr Code Generator</title>
+    <!-- Устанавливает заголовок страницы, который отображается на вкладке браузера -->
 </head>
 
 <body>
-
+    <!-- Начало тела документа -->
     <section>
+        <!-- Начало секции для содержимого генератора QR-кода -->
         <div class="row">
+            <!-- Контейнер для элементов управления в строке -->
             <input type="color" class="light" value="#ffffff">
+            <!-- Поле выбора цвета для светлой части QR-кода, с начальным значением белого цвета -->
             <input type="color" class="dark">
+            <!-- Поле выбора цвета для темной части QR-кода -->
             <select class="sizes">
+                <!-- Выпадающий список для выбора размера QR-кода -->
                 <option value="100">100×100</option>
+                <!-- Опция для размера 100x100 пикселей -->
                 <option value="200">200×200</option>
+                <!-- Опция для размера 200x200 пикселей -->
                 <option value="300">300×300</option>
+                <!-- Опция для размера 300x300 пикселей -->
                 <option selected value="400">400×400</option>
+                <!-- Опция для размера 400x400 пикселей, выбранная по умолчанию -->
                 <option value="500">500×500</option>
+                <!-- Опция для размера 500x500 пикселей -->
                 <option value="600">600×600</option>
+                <!-- Опция для размера 600x600 пикселей -->
                 <option value="700">700×700</option>
+                <!-- Опция для размера 700x700 пикселей -->
                 <option value="800">800×800</option>
+                <!-- Опция для размера 800x800 пикселей -->
                 <option value="900">900×900</option>
+                <!-- Опция для размера 900x900 пикселей -->
                 <option value="1000">1000×1000</option>
+                <!-- Опция для размера 1000x1000 пикселей -->
             </select>
         </div>
         <input type="text" class="qr-text" placeholder="Enter QR Text">
+        <!-- Поле ввода текста для генерации QR-кода с подсказкой -->
         <div id="qr-code"></div>
+        <!-- Контейнер для отображения сгенерированного QR-кода -->
         <div class="action-container">
+            <!-- Контейнер для кнопок действий -->
             <a href="#" class="download btn" download="QRCode">
+                <!-- Ссылка для загрузки QR-кода с атрибутом download -->
                 <span>Download</span>
+                <!-- Текст кнопки загрузки -->
                 <img src="download.svg" alt="">
+                <!-- Иконка загрузки (SVG) -->
             </a>
             <button class="btn share-btn">
+                <!-- Кнопка для совместного использования QR-кода -->
                 <span>Share</span>
+                <!-- Текст кнопки совместного использования -->
                 <img src="share.svg" alt="">
+                <!-- Иконка совместного использования (SVG) -->
             </button>
         </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <!-- Подключает библиотеку для генерации QR-кодов -->
     <script src="index.js"></script>
+    <!-- Подключает внешний JavaScript файл для обработки логики генератора QR-кодов -->
 </body>
 
 </html>
